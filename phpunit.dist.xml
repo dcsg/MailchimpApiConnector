@@ -1,0 +1,26 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="false"
+         bootstrap="tests/autoload.php"
+    >
+    <php>
+        <!-- <server name="MAILCHIMP_API_KEY" value="YOUR_API_KEY" /> -->
+        <!-- <server name="MAILCHIMP_LIST_ID" value="YOUR_LIST_ID" /> -->
+    </php>
+    <testsuites>
+        <testsuite name="MailchimpApi Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./src/MailchimpApi/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
