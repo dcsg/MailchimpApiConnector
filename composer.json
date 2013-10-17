@@ -22,7 +22,8 @@
     "require-dev": {
         "kriswallsmith/buzz": "@stable",
         "guzzle/guzzle": "@stable",
-        "zendframework/zend-http": "~2.1"
+        "zendframework/zend-http": "~2.1",
+        "phpunit/phpunit": "3.7.*@dev"
 
     },
     "suggest": {
