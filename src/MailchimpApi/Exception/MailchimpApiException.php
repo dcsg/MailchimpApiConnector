@@ -18,5 +18,3 @@ namespace MailchimpApi\Exception;
 class MailchimpApiException extends \Exception
 {
 }
-
-

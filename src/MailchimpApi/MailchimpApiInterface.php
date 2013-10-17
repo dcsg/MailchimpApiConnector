@@ -10,7 +10,6 @@
 
 namespace MailchimpApi;
 
-
 use MailchimpApi\Exception\MailchimpApiException;
 use MailchimpApi\HttpAdapter\HttpAdapterInterface;
 
@@ -23,16 +22,16 @@ interface MailchimpApiInterface
 {
     /**
      * Calls Mailchimp API
-     * @param string $method
-     * @param array $params
-     * @param string $format
+     * @param  string $method
+     * @param  array  $params
+     * @param  string $format
      * @return string Response content
      */
     public function call($method, array $params = array(), $format = '');
 
     /**
      * Gets API key
-     * @return  string
+     * @return string
      */
     public function getApiKey();
 
@@ -44,37 +43,37 @@ interface MailchimpApiInterface
 
     /**
      * Gets DC
-     * @return  string
+     * @return string
      */
     public function getDc();
 
     /**
      * Builds the query string for the API request parameters
-     * @param   array $params
-     * @return  string URL encoded string
-     * @return  null
+     * @param  array  $params
+     * @return string URL encoded string
+     * @return null
      */
     public function paramsQueryStringBuilder(array $params);
 
     /**
      * Sets API key
-     * @param   string $key
-     * @throws  MailchimpApiException
-     * @return  null
+     * @param  string                $key
+     * @throws MailchimpApiException
+     * @return null
      */
     public function setApiKey($key);
 
     /**
      * Sets API version
-     * @param   float $version
-     * @return  null
+     * @param  float $version
+     * @return null
      */
     public function setApiVersion($version);
 
     /**
      * Sets DC
-     * @param   string $name
-     * @return  null
+     * @param  string $name
+     * @return null
      */
     public function setDc($name);
 
@@ -86,7 +85,7 @@ interface MailchimpApiInterface
 
     /**
      * Sets Adapter
-     * @param HttpAdapterInterface $adapter
+     * @param  HttpAdapterInterface $adapter
      * @return null
      */
     public function setAdapter(HttpAdapterInterface $adapter);

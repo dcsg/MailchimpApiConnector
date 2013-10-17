@@ -10,7 +10,7 @@ use MailchimpApi\HttpAdapter\HttpAdapterInterface;
 class TestCase extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @param  mixed $expects
+     * @param  mixed                $expects
      * @return HttpAdapterInterface
      */
     protected function getMockAdapter($expects = null)

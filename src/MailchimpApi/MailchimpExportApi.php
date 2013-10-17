@@ -53,6 +53,7 @@ class  MailchimpExportApi extends AbstractMailchimpApi implements MailchimpApiIn
             }
             $paramsString .= "&$key=$value";
         }
+
         return $paramsString;
     }
 }

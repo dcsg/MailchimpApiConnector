@@ -59,7 +59,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
 
     /**
      * @param HttpAdapterInterface $adapter
-     * @param string $apiKey
+     * @param string               $apiKey
      */
     public function __construct(HttpAdapterInterface $adapter, $apiKey)
     {
