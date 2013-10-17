@@ -6,7 +6,7 @@ php:
     - 5.5
 
 before_script:
-    - curl -s http://getcomposer.org/installer | php
-    - php composer.phar install --dev --prefer-dist
+    - composer self-update
+    - composer install --dev
 
-script: phpunit --coverage-text -c phpunit.dist.xml
+script: ./vendor/bin/phpunit
