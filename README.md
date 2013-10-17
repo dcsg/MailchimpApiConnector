@@ -15,7 +15,7 @@
 ```json
 "require": {
     ...
-    "danielcsgomes/MailchimpApi": "0.1.*@dev"
+    "danielcsgomes/mailchimpapi": "1.0.*@dev"
 }
 ```
 
