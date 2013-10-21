@@ -10,12 +10,6 @@
             "email": "me@danielcsgomes.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://packages.zendframework.com/"
-        }
-    ],
     "require": {
         "php": ">=5.3.0"
     },
@@ -39,7 +33,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "2.0.0-dev"
         }
     }
 

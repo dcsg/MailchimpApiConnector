@@ -31,7 +31,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     /**
      * @version
      */
-    const VERSION = '1.0.0';
+    const VERSION = '2.0.0-dev';
     /**
      * @const string URL Format to call the API
      */
