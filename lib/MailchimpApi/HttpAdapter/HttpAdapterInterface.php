@@ -26,7 +26,7 @@ interface HttpAdapterInterface
 
     /**
      * @param string $url
-     * @param array $headers HTTP headers
+     * @param array  $headers HTTP headers
      * @param string $content Content to be sent
      *
      * @return string
