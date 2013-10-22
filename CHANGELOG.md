@@ -2,6 +2,7 @@
 
  * Add support for version 2.0 of Mailchimp API
  * Add HTTP POST method support to HTTP Adapters
+ * Dropped Socket HTTP Adapter
 
 ## v1.0.0
 
