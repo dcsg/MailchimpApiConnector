@@ -36,9 +36,10 @@ class SocketHttpAdapter implements HttpAdapterInterface
         $info = parse_url($url);
 
         $hostname = $info['host'];
-        $port     = isset($info['port']) ? $info['port'] : 80;
-        $path     = sprintf('%s%s',
-            isset($info['path'])  ? $info['path']        : '/',
+        $port = isset($info['port']) ? $info['port'] : 80;
+        $path = sprintf(
+            '%s%s',
+            isset($info['path']) ? $info['path'] : '/',
             isset($info['query']) ? '?' . $info['query'] : ''
         );
 
@@ -65,6 +66,14 @@ class SocketHttpAdapter implements HttpAdapterInterface
         }
 
         return $httpResponse['content'];
+    }
+
+    /**
+     * {@inheritdoc}
+     * @todo - impement post content
+     */
+    public function postContent($url, $headers = array(), $content = '', array $options = array())
+    {
     }
 
     /**

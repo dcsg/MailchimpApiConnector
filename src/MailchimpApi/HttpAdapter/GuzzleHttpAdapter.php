@@ -45,7 +45,22 @@ class GuzzleHttpAdapter implements HttpAdapterInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
+     */
+    public function postContent($url, $headers = array(), $content = '', array $options = array())
+    {
+        try {
+            $response = $this->client->post($url, $headers, $content, $options);
+            $content = (string) $response->getBody();
+        } catch (\Exception $e) {
+            $content = null;
+        }
+
+        return $content;
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function getName()
     {

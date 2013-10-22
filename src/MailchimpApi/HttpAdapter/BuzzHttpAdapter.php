@@ -46,7 +46,22 @@ class BuzzHttpAdapter implements HttpAdapterInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
+     */
+    public function postContent($url, $headers = array(), $content = '')
+    {
+        try {
+            $response = $this->browser->post($url, $headers, $content);
+            $content = $response->getContent();
+        } catch (\Exception $e) {
+            $content = null;
+        }
+
+        return $content;
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function getName()
     {
