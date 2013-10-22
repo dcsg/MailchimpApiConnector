@@ -17,6 +17,12 @@ class CurlHttpAdapterTest extends TestCase
         }
     }
 
+    public function testGetName()
+    {
+        $curl = new CurlHttpAdapter();
+        $this->assertEquals('curl', $curl->getName());
+    }
+
     public function testGetNullContent()
     {
         $curl = new CurlHttpAdapter();
@@ -27,5 +33,17 @@ class CurlHttpAdapterTest extends TestCase
     {
         $curl = new CurlHttpAdapter();
         $this->assertNull($curl->getContent(null));
+    }
+
+    public function testPostNullContent()
+    {
+        $curl = new CurlHttpAdapter();
+        $this->assertNull($curl->postContent(null));
+    }
+
+    public function testPostFalseContent()
+    {
+        $curl = new CurlHttpAdapter();
+        $this->assertNull($curl->postContent(null));
     }
 }

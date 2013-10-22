@@ -20,6 +20,12 @@ class GuzzleHttpAdapterTest extends \MailchimpApi\Tests\TestCase
         }
     }
 
+    public function testGetName()
+    {
+        $adapter = new GuzzleHttpAdapter();
+        $this->assertEquals('guzzle', $adapter->getName());
+    }
+
     /**
      * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::__construct
      */
@@ -33,7 +39,7 @@ class GuzzleHttpAdapterTest extends \MailchimpApi\Tests\TestCase
      * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::__construct
      * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::getContent
      */
-    public function testRetrievesResponse()
+    public function testRetrievesResponseFromGetRequest()
     {
         $historyPlugin = new HistoryPlugin();
         $mockPlugin = new MockPlugin(array(new Response(200, null, 'body')));
@@ -49,5 +55,22 @@ class GuzzleHttpAdapterTest extends \MailchimpApi\Tests\TestCase
             'http://test.com/',
             $historyPlugin->getLastRequest()->getUrl()
         );
+    }
+
+    /**
+     * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::__construct
+     * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::postContent
+     */
+    public function testRetrievesResponseFromPostRequest()
+    {
+        $historyPlugin = new HistoryPlugin();
+        $mockPlugin = new MockPlugin(array(new Response(200, null, 'body')));
+
+        $client = new Client();
+        $client->getEventDispatcher()->addSubscriber($mockPlugin);
+        $client->getEventDispatcher()->addSubscriber($historyPlugin);
+
+        $adapter = new GuzzleHttpAdapter($client);
+        $this->assertEquals('body', $adapter->postContent('http://test.com/', array(), 'body'));
     }
 }

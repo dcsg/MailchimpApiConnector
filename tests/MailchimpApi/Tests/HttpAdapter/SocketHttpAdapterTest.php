@@ -10,9 +10,19 @@ use MailchimpApi\Tests\TestCase;
  */
 class SocketHttpAdapterTest extends TestCase
 {
+    /**
+     * @var SocketHttpAdapter
+     */
+    private $adapter;
+
     protected function setUp()
     {
         $this->adapter = new SocketHttpAdapter();
+    }
+
+    public function testGetName()
+    {
+        $this->assertEquals('socket', $this->adapter->getName());
     }
 
     public function testGetContent()
