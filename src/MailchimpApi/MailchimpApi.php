@@ -20,12 +20,12 @@ class MailchimpApi extends AbstractMailchimpApi implements MailchimpApiInterface
 {
     const API_URL = 'http://%s.api.mailchimp.com/%0.1f/?apikey=%s&format=%s&method=%s%s';
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected $apiVersion = 1.3;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function call($method, array $params = array(), $format = self::FORMAT_JSON)
     {

@@ -35,7 +35,7 @@ class GuzzleHttpAdapter implements HttpAdapterInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContent($url)
     {

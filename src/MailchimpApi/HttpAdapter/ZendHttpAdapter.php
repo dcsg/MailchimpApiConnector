@@ -32,7 +32,7 @@ class ZendHttpAdapter implements HttpAdapterInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContent($url)
     {

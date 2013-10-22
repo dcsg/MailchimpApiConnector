@@ -29,7 +29,7 @@ class SocketHttpAdapter implements HttpAdapterInterface
     private $redirectsRemaining = self::MAX_REDIRECTS;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContent($url)
     {
@@ -146,7 +146,7 @@ class SocketHttpAdapter implements HttpAdapterInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getName()
     {

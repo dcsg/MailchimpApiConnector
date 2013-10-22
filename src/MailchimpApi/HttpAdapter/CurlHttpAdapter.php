@@ -18,7 +18,7 @@ use MailchimpApi\Exception\ExtensionNotLoadedException;
 class CurlHttpAdapter implements HttpAdapterInterface
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContent($url)
     {
