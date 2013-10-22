@@ -20,7 +20,7 @@
     </testsuites>
     <filter>
         <whitelist>
-            <directory>./src/MailchimpApi/</directory>
+            <directory>./lib/MailchimpApi/</directory>
         </whitelist>
     </filter>
 </phpunit>

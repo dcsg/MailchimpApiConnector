@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-0": {
-            "MailchimpApi": "src/"
+            "MailchimpApi": "lib/"
         }
     },
     "extra": {
