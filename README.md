@@ -15,7 +15,7 @@
 ```json
 "require": {
     ...
-    "danielcsgomes/mailchimpapi": "1.0.*@dev"
+    "danielcsgomes/mailchimpapi": "2.0.*@dev"
 }
 ```
 
@@ -67,14 +67,13 @@ echo $mailchimp->call('list', $params);
 ### TODO
 
 * Better handling of the HTTP response.
-* Implement the API calls via HTTP POST method.
 * Implement OAuth2.
 
 
 ### Credits
 
 * [Daniel Gomes](me@danielcsgomes.com)
-* HTTP Adapters are part of [Geocoder](https://github.com/willdurand/Geocoder) Library
+* Part of HTTP Adapters are from [Geocoder Library](https://github.com/geocoder-php/Geocoder)
 
 ### License
 

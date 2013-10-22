@@ -15,12 +15,7 @@
     </php>
     <testsuites>
         <testsuite name="MailchimpApi Test Suite">
-            <directory>./tests/</directory>
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist>
-            <directory>./lib/MailchimpApi/</directory>
-        </whitelist>
-    </filter>
 </phpunit>
