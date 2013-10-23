@@ -17,7 +17,7 @@ Mailchimp Abstract API Connector
 
 The bulk of the documentation is stored in the doc/index.md file:
 
-[Read the Documentation](https://raw.github.com/danielcsgomes/MailchimpApi/master/doc/index.md)
+[Read the Documentation](https://github.com/danielcsgomes/MailchimpApi/blob/master/doc/index.md)
 
 ### TODO
 
