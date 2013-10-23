@@ -20,13 +20,13 @@ class MailchimpApiTest extends TestCase
 
     public function setUp()
     {
-        $this->mailchimpApi = new MailchimpApi($this->getMockAdapter($this->never()), 'api_key');
+        $this->mailchimpApi = new MailchimpApi($this->getMockAdapter(), 'api_key');
     }
 
     /**
      * @expectedException \MailchimpApi\Exception\MailchimpApiException
      */
-    public function testCallApiWithEmptyOrNullApiKey()
+    public function testSetANullOrEmptyApiKey()
     {
         $this->mailchimpApi->setApiKey(''); // Test with empty string
         $this->mailchimpApi->setApiKey(null); // Test with empty string
@@ -34,7 +34,6 @@ class MailchimpApiTest extends TestCase
 
     public function testCallApi()
     {
-        $this->mailchimpApi->setAdapter($this->getMockAdapter());
         $this->mailchimpApi->setApiKey('api_key');
         $response = $this->mailchimpApi->call("listActivity", array(""));
         $this->assertEquals('string', gettype($response));
@@ -42,15 +41,20 @@ class MailchimpApiTest extends TestCase
 
     }
 
-    public function testCallApiWithRealData()
+    public function testCallOldApi()
     {
-        if (!isset($_SERVER['MAILCHIMP_API_KEY'])) {
-            $this->markTestSkipped('You need to configure the MAILCHIMP_API_KEY value in phpunit.xml');
-        }
+        $this->mailchimpApi->setApiKey('api_key');
+        $this->mailchimpApi->setApiVersion(1.3);
+        $response = $this->mailchimpApi->call("listActivity", array(""));
+        $this->assertEquals('string', gettype($response));
+        $this->assertGreaterThan(0, strlen($response));
 
-        if (!isset($_SERVER['MAILCHIMP_LIST_ID'])) {
-            $this->markTestSkipped('You need to configure the MAILCHIMP_LIST_ID value in phpunit.xml');
-        }
+    }
+
+    public function testCallOldApiWithRealData()
+    {
+        $this->verifyApiKeyAndListId();
+        $this->verifyCurlExtension();
 
         $this->mailchimpApi->setAdapter(new CurlHttpAdapter());
         $this->mailchimpApi->setApiKey($_SERVER['MAILCHIMP_API_KEY']);
@@ -64,15 +68,10 @@ class MailchimpApiTest extends TestCase
         $this->assertNotContains('error', $response);
     }
 
-    public function testCallApiWithRealDataAndWithWrongMethod()
+    public function testCallApiWithRealData()
     {
-        if (!isset($_SERVER['MAILCHIMP_API_KEY'])) {
-            $this->markTestSkipped('You need to configure the MAILCHIMP_API_KEY value in phpunit.xml');
-        }
-
-        if (!isset($_SERVER['MAILCHIMP_LIST_ID'])) {
-            $this->markTestSkipped('You need to configure the MAILCHIMP_LIST_ID value in phpunit.xml');
-        }
+        $this->verifyApiKeyAndListId();
+        $this->verifyCurlExtension();
 
         $this->mailchimpApi->setAdapter(new CurlHttpAdapter());
         $this->mailchimpApi->setApiKey($_SERVER['MAILCHIMP_API_KEY']);
@@ -81,8 +80,44 @@ class MailchimpApiTest extends TestCase
             "id" => $_SERVER['MAILCHIMP_LIST_ID']
         );
 
+        $response = $this->mailchimpApi->call('lists/activity', $params);
+        $this->assertGreaterThan(0, strlen($response));
+        $this->assertNotContains('error', $response);
+    }
+
+    public function testCallApiWithRealDataAndWithWrongMethod()
+    {
+        $this->verifyApiKeyAndListId();
+        $this->verifyCurlExtension();
+
+        $this->mailchimpApi->setAdapter(new CurlHttpAdapter());
+        $this->mailchimpApi->setApiKey($_SERVER['MAILCHIMP_API_KEY']);
+        $this->mailchimpApi->setApiVersion(2.0);
+
+        $params = array(
+            "id" => $_SERVER['MAILCHIMP_LIST_ID']
+        );
+
         $response = $this->mailchimpApi->call('invalid_method', $params);
         $this->assertGreaterThan(0, strlen($response));
         $this->assertContains('error', $response);
+    }
+
+    private function verifyApiKeyAndListId()
+    {
+        if (!isset($_SERVER['MAILCHIMP_API_KEY'])) {
+            $this->markTestSkipped('You need to configure the MAILCHIMP_API_KEY value in phpunit.xml');
+        }
+
+        if (!isset($_SERVER['MAILCHIMP_LIST_ID'])) {
+            $this->markTestSkipped('You need to configure the MAILCHIMP_LIST_ID value in phpunit.xml');
+        }
+    }
+
+    private function verifyCurlExtension()
+    {
+        if (!function_exists('curl_init')) {
+            throw new ExtensionNotLoadedException('cURL has to be enabled.');
+        }
     }
 }

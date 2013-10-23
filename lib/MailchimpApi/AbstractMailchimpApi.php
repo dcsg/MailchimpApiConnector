@@ -68,7 +68,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getAdapter()
     {
@@ -76,7 +76,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function setAdapter(HttpAdapterInterface $adapter)
     {
@@ -84,7 +84,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getApiKey()
     {
@@ -92,7 +92,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function setApiKey($key)
     {
@@ -109,7 +109,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getApiVersion()
     {
@@ -117,7 +117,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function setApiVersion($version)
     {
@@ -125,7 +125,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getDc()
     {
@@ -133,7 +133,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function setDc($name)
     {

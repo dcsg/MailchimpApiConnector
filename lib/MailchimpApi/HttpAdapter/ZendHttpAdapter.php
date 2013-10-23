@@ -12,6 +12,7 @@ namespace MailchimpApi\HttpAdapter;
 
 use MailchimpApi\HttpAdapter\HttpAdapterInterface;
 use Zend\Http\Client;
+use Zend\Http\Request;
 
 /**
  * @author William Durand <william.durand1@gmail.com>
@@ -32,7 +33,7 @@ class ZendHttpAdapter implements HttpAdapterInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContent($url)
     {
@@ -47,7 +48,26 @@ class ZendHttpAdapter implements HttpAdapterInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
+     */
+    public function postContent($url, $headers = array(), $content = '', array $options = array())
+    {
+        try {
+            $this->client->setUri($url);
+            $this->client->setMethod(Request::METHOD_POST);
+            $this->client->setHeaders($headers);
+            $this->client->setRawBody($content);
+            $response = $this->client->send();
+            $content = $response->isSuccess() ? $response->getBody() : null;
+        } catch (\Exception $e) {
+            $content = null;
+        }
+
+        return $content;
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function getName()
     {

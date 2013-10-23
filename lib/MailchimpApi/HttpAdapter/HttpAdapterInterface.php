@@ -25,6 +25,15 @@ interface HttpAdapterInterface
     public function getContent($url);
 
     /**
+     * @param string $url
+     * @param array  $headers HTTP headers
+     * @param string $content Content to be sent
+     *
+     * @return string
+     */
+    public function postContent($url, $headers = array(), $content = '');
+
+    /**
      * Returns the name of the HTTP Adapter.
      *
      * @return string

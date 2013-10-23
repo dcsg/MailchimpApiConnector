@@ -16,16 +16,16 @@ namespace MailchimpApi;
  * @description Class to use the Mailchimp Export API <http://apidocs.mailchimp.com/export/>
  * @author Daniel Gomes <me@danielcsgomes.com>
  */
-class  MailchimpExportApi extends AbstractMailchimpApi implements MailchimpApiInterface
+class MailchimpExportApi extends AbstractMailchimpApi implements MailchimpApiInterface
 {
     const API_URL = 'http://%s.api.mailchimp.com/export/%0.1f/%s?&apikey=%s%s';
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected $apiVersion = 1.0;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function call($method, array $params = array(), $format = self::FORMAT_JSON)
     {
@@ -42,7 +42,7 @@ class  MailchimpExportApi extends AbstractMailchimpApi implements MailchimpApiIn
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function paramsQueryStringBuilder(array $params)
     {

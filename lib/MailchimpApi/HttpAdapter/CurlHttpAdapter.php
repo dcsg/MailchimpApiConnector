@@ -18,7 +18,7 @@ use MailchimpApi\Exception\ExtensionNotLoadedException;
 class CurlHttpAdapter implements HttpAdapterInterface
 {
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getContent($url)
     {
@@ -40,7 +40,32 @@ class CurlHttpAdapter implements HttpAdapterInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
+     */
+    public function postContent($url, $headers = array(), $content = '')
+    {
+        if (!function_exists('curl_init')) {
+            throw new ExtensionNotLoadedException('cURL has to be enabled.');
+        }
+
+        $c = curl_init();
+        curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($c, CURLOPT_URL, $url);
+        curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($c, CURLOPT_HTTPHEADER, array('Content-Length: ' . strlen($content)));
+        curl_setopt($c, CURLOPT_POSTFIELDS, $content);
+        $content = curl_exec($c);
+        curl_close($c);
+
+        if (false === $content) {
+            $content = null;
+        }
+
+        return $content;
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function getName()
     {

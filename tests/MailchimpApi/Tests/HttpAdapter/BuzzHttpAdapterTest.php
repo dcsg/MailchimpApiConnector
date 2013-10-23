@@ -17,6 +17,12 @@ class BuzzHttpAdapterTest extends TestCase
         }
     }
 
+    public function testGetName()
+    {
+        $buzz = new BuzzHttpAdapter();
+        $this->assertEquals('buzz', $buzz->getName());
+    }
+    
     public function testGetNullContent()
     {
         $buzz = new BuzzHttpAdapter();
@@ -38,23 +44,44 @@ class BuzzHttpAdapterTest extends TestCase
         $this->assertEquals($content, $buzz->getContent('http://www.example.com'));
     }
 
-    protected function getBrowserMock($content)
+    public function testPostNullContent()
+    {
+        $buzz = new BuzzHttpAdapter();
+        $this->assertNull($buzz->postContent(null));
+    }
+
+    public function testPostFalseContent()
+    {
+        $buzz = new BuzzHttpAdapter();
+        $this->assertNull($buzz->postContent(false));
+    }
+
+    public function testPostContentWithCustomBrowser()
+    {
+        $content = 'foobar content';
+        $browser = $this->getBrowserMock($content, 'post');
+
+        $buzz = new BuzzHttpAdapter($browser);
+        $this->assertEquals($content, $buzz->postContent('http://www.example.com'));
+    }
+
+    protected function getBrowserMock($content, $method = 'get')
     {
         $mock = $this->getMock('\Buzz\Browser');
         $mock
             ->expects($this->once())
-            ->method('get')
+            ->method($method)
             ->will($this->returnValue($this->getResponseMock($content)));
 
         return $mock;
     }
 
-    protected function getResponseMock($content)
+    protected function getResponseMock($content, $method = 'getContent')
     {
         $mock = $this->getMock('\Buzz\Message\Response');
         $mock
             ->expects($this->once())
-            ->method('getContent')
+            ->method($method)
             ->will($this->returnValue($content));
 
         return $mock;
