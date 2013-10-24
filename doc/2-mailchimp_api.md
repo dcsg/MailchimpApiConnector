@@ -1,6 +1,6 @@
 # Usage of the Mailchimp API v2.0
 
-## Simple example to retrieve listActivity
+#### Simple example to retrieve listActivity
 
 ```php
 
@@ -22,6 +22,8 @@ print_r($response);
 ```
 
 # Usage of the Mailchimp API v1.x
+
+#### Simple example to retrieve listActivity
 
 ```php
 
