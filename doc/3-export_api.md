@@ -8,8 +8,8 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use MailchimpApi\HttpAdapter\BuzzHttpAdapter;
-use MailchimpApi\MailchimpExportApi;
+use MailchimpApiConnector\HttpAdapter\BuzzHttpAdapter;
+use MailchimpApiConnector\MailchimpExportApi;
 
 $adapter = new BuzzHttpAdapter();
 $mailchimpExportApi = new MailchimpExportApi($adapter, 'YOUR-API-KEY');

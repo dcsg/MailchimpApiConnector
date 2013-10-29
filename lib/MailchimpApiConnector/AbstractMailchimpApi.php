@@ -1,21 +1,21 @@
 <?php
 
 /**
- * This file is part of the MailchimpApi package.
+ * This file is part of the MailchimpApiConnector package.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @license    MIT License
  */
 
-namespace MailchimpApi;
+namespace MailchimpApiConnector;
 
-use MailchimpApi\Exception\MailchimpApiException;
-use MailchimpApi\HttpAdapter\HttpAdapterInterface;
+use MailchimpApiConnector\Exception\MailchimpApiException;
+use MailchimpApiConnector\HttpAdapter\HttpAdapterInterface;
 
 /**
  * Class AbstractMailchimpApi
- * @package MailchimpApi
+ * @package MailchimpApiConnector
  * @author Daniel Gomes <me@danielcsgomes.com>
  * @todo Add option to connect the API by using the POST method and HTTPS
  */

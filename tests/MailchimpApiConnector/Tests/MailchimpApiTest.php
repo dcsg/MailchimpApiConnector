@@ -1,20 +1,20 @@
 <?php
 
-namespace MailchimpApi\Tests;
+namespace MailchimpApiConnector\Tests;
 
-use MailchimpApi\HttpAdapter\CurlHttpAdapter;
-use MailchimpApi\MailchimpApi;
+use MailchimpApiConnector\HttpAdapter\CurlHttpAdapter;
+use MailchimpApiConnector\MailchimpApi;
 
 /**
  * Class MailchimpApiTest
- * @package MailchimpApi\Tests
+ * @package MailchimpApiConnector\Tests
  * @author Daniel Gomes <me@danielcsgomes.com>
  */
 class MailchimpApiTest extends TestCase
 {
 
     /**
-     * @var \MailchimpApi\MailchimpApi
+     * @var \MailchimpApiConnector\MailchimpApi
      */
     protected $mailchimpApi;
 
@@ -24,7 +24,7 @@ class MailchimpApiTest extends TestCase
     }
 
     /**
-     * @expectedException \MailchimpApi\Exception\MailchimpApiException
+     * @expectedException \MailchimpApiConnector\Exception\MailchimpApiException
      */
     public function testSetANullOrEmptyApiKey()
     {

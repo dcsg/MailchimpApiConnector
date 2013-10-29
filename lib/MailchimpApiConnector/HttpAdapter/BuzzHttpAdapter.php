@@ -8,7 +8,7 @@
  * @license    MIT License
  */
 
-namespace MailchimpApi\HttpAdapter;
+namespace MailchimpApiConnector\HttpAdapter;
 
 use Buzz\Browser;
 

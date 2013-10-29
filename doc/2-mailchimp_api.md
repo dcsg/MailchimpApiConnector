@@ -8,8 +8,8 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use MailchimpApi\HttpAdapter\BuzzHttpAdapter;
-use MailchimpApi\MailchimpApi;
+use MailchimpApiConnector\HttpAdapter\BuzzHttpAdapter;
+use MailchimpApiConnector\MailchimpApi;
 
 $adapter = new BuzzHttpAdapter();
 $mailchimp = new MailchimpApi($adapter, 'YOUR-API-KEY');
@@ -31,8 +31,8 @@ print_r($response);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use MailchimpApi\HttpAdapter\BuzzHttpAdapter;
-use MailchimpApi\MailchimpApi;
+use MailchimpApiConnector\HttpAdapter\BuzzHttpAdapter;
+use MailchimpApiConnector\MailchimpApi;
 
 $adapter = new BuzzHttpAdapter();
 $mailchimp = new MailchimpApi($adapter, 'YOUR-API-KEY');

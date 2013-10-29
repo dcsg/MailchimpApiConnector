@@ -1,18 +1,18 @@
 <?php
 
 /**
- * This file is part of the MailchimpApi package.
+ * This file is part of the MailchimpApiConnector package.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @license    MIT License
  */
 
-namespace MailchimpApi;
+namespace MailchimpApiConnector;
 
 /**
- * Class MailchimpApi
- * @package MailchimpApi
+ * Class MailchimpApiConnector
+ * @package MailchimpApiConnector
  * @description Class to use the Mailchimp API <http://apidocs.mailchimp.com/api/>
  * @author Daniel Gomes <me@danielcsgomes.com>
  */

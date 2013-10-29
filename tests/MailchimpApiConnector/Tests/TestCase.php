@@ -1,8 +1,8 @@
 <?php
 
-namespace MailchimpApi\Tests;
+namespace MailchimpApiConnector\Tests;
 
-use MailchimpApi\HttpAdapter\HttpAdapterInterface;
+use MailchimpApiConnector\HttpAdapter\HttpAdapterInterface;
 
 /**
  * @author William Durand <william.durand1@gmail.com>
@@ -19,7 +19,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
             $expects = $this->any();
         }
 
-        $mock = $this->getMock('\MailchimpApi\HttpAdapter\HttpAdapterInterface');
+        $mock = $this->getMock('\MailchimpApiConnector\HttpAdapter\HttpAdapterInterface');
         $mock
             ->expects($expects)
             ->method('getContent')

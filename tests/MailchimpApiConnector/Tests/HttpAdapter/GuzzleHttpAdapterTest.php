@@ -1,17 +1,18 @@
 <?php
 
-namespace MailchimpApi\Tests\HttpAdapter;
+namespace MailchimpApiConnector\Tests\HttpAdapter;
 
 use Guzzle\Http\Message\Response;
 use Guzzle\Plugin\History\HistoryPlugin;
 use Guzzle\Plugin\Mock\MockPlugin;
 use Guzzle\Service\Client;
-use MailchimpApi\HttpAdapter\GuzzleHttpAdapter;
+use MailchimpApiConnector\HttpAdapter\GuzzleHttpAdapter;
+use MailchimpApiConnector\Tests\TestCase;
 
 /**
  * @author Michael Dowling <michael@guzzlephp.org>
  */
-class GuzzleHttpAdapterTest extends \MailchimpApi\Tests\TestCase
+class GuzzleHttpAdapterTest extends TestCase
 {
     protected function setUp()
     {
@@ -27,7 +28,7 @@ class GuzzleHttpAdapterTest extends \MailchimpApi\Tests\TestCase
     }
 
     /**
-     * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::__construct
+     * @covers MailchimpApiConnector\HttpAdapter\GuzzleHttpAdapter::__construct
      */
     public function testCreatesDefaultClient()
     {
@@ -36,8 +37,8 @@ class GuzzleHttpAdapterTest extends \MailchimpApi\Tests\TestCase
     }
 
     /**
-     * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::__construct
-     * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::getContent
+     * @covers MailchimpApiConnector\HttpAdapter\GuzzleHttpAdapter::__construct
+     * @covers MailchimpApiConnector\HttpAdapter\GuzzleHttpAdapter::getContent
      */
     public function testRetrievesResponseFromGetRequest()
     {
@@ -58,8 +59,8 @@ class GuzzleHttpAdapterTest extends \MailchimpApi\Tests\TestCase
     }
 
     /**
-     * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::__construct
-     * @covers MailchimpApi\HttpAdapter\GuzzleHttpAdapter::postContent
+     * @covers MailchimpApiConnector\HttpAdapter\GuzzleHttpAdapter::__construct
+     * @covers MailchimpApiConnector\HttpAdapter\GuzzleHttpAdapter::postContent
      */
     public function testRetrievesResponseFromPostRequest()
     {

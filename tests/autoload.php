@@ -19,4 +19,4 @@ EOT
     );
 }
 
-$loader->add('MailchimpApi\Tests', __DIR__);
+$loader->add('MailchimpApiConnector\Tests', __DIR__);

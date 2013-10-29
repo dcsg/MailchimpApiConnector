@@ -8,11 +8,11 @@
  * @license    MIT License
  */
 
-namespace MailchimpApi\Exception;
+namespace MailchimpApiConnector\Exception;
 
 /**
- * @author William Durand <william.durand1@gmail.com>
+ * @author Antoine Corcy <contact@sbin.dk>
  */
-class RuntimeException extends \RuntimeException implements ExceptionInterface
+class HttpException extends \RuntimeException implements ExceptionInterface
 {
 }

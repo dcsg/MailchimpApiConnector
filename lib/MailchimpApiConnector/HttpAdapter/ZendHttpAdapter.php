@@ -8,9 +8,9 @@
  * @license    MIT License
  */
 
-namespace MailchimpApi\HttpAdapter;
+namespace MailchimpApiConnector\HttpAdapter;
 
-use MailchimpApi\HttpAdapter\HttpAdapterInterface;
+use MailchimpApiConnector\HttpAdapter\HttpAdapterInterface;
 use Zend\Http\Client;
 use Zend\Http\Request;
 

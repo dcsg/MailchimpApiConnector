@@ -1,21 +1,21 @@
 <?php
 
-namespace MailchimpApi\Tests;
+namespace MailchimpApiConnector\Tests;
 
-use MailchimpApi\Exception\MailchimpApiException;
-use MailchimpApi\HttpAdapter\CurlHttpAdapter;
-use MailchimpApi\MailchimpExportApi;
+use MailchimpApiConnector\Exception\MailchimpApiException;
+use MailchimpApiConnector\HttpAdapter\CurlHttpAdapter;
+use MailchimpApiConnector\MailchimpExportApi;
 
 /**
  * Class MailchimpExportApiTest
- * @package MailchimpApi\Tests
+ * @package MailchimpApiConnector\Tests
  * @author Daniel Gomes <me@danielcsgomes.com>
  */
 class MailchimpExportApiTest extends TestCase
 {
 
     /**
-     * @var \MailchimpApi\MailchimpExportApi
+     * @var \MailchimpApiConnector\MailchimpExportApi
      */
     protected $mailchimpExportApi;
 
@@ -25,7 +25,7 @@ class MailchimpExportApiTest extends TestCase
     }
 
     /**
-     * @expectedException \MailchimpApi\Exception\MailchimpApiException
+     * @expectedException \MailchimpApiConnector\Exception\MailchimpApiException
      */
     public function testCallExportApiWithoutApiKey()
     {

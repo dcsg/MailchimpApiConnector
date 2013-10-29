@@ -1,9 +1,9 @@
 <?php
 
-namespace MailchimpApi\Tests\HttpAdapter;
+namespace MailchimpApiConnector\Tests\HttpAdapter;
 
-use MailchimpApi\HttpAdapter\BuzzHttpAdapter;
-use MailchimpApi\Tests\TestCase;
+use MailchimpApiConnector\HttpAdapter\BuzzHttpAdapter;
+use MailchimpApiConnector\Tests\TestCase;
 
 /**
  * @author William Durand <william.durand1@gmail.com>

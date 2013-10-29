@@ -1,14 +1,14 @@
 <?php
 
 /**
- * This file is part of the MailchimpApi package.
+ * This file is part of the MailchimpApiConnector package.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
  * @license    MIT License
  */
 
-namespace MailchimpApi\HttpAdapter;
+namespace MailchimpApiConnector\HttpAdapter;
 
 /**
  * @author William Durand <william.durand1@gmail.com>

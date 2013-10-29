@@ -1,9 +1,9 @@
 <?php
 
-namespace MailchimpApi\Tests\HttpAdapter;
+namespace MailchimpApiConnector\Tests\HttpAdapter;
 
-use MailchimpApi\HttpAdapter\ZendHttpAdapter;
-use MailchimpApi\Tests\TestCase;
+use MailchimpApiConnector\HttpAdapter\ZendHttpAdapter;
+use MailchimpApiConnector\Tests\TestCase;
 use Zend\Http\Client;
 
 /**

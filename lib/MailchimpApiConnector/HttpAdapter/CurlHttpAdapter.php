@@ -8,9 +8,9 @@
  * @license    MIT License
  */
 
-namespace MailchimpApi\HttpAdapter;
+namespace MailchimpApiConnector\HttpAdapter;
 
-use MailchimpApi\Exception\ExtensionNotLoadedException;
+use MailchimpApiConnector\Exception\ExtensionNotLoadedException;
 
 /**
  * @author William Durand <william.durand1@gmail.com>

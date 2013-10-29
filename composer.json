@@ -1,9 +1,9 @@
 {
-    "name": "danielcsgomes/mailchimpapi",
+    "name": "danielcsgomes/mailchimp-api-connector",
     "type": "library",
-    "description": "Abstract Mailchimp API connector for PHP 5.3+",
+    "description": "Lightweight Mailchimp API connector for PHP 5.3+",
     "keywords": ["mailchimp", "api", "abstraction"],
-    "homepage": "https://github.com/danielcsgomes/MailchimpApi",
+    "homepage": "https://github.com/danielcsgomes/MailchimpApiConnector",
     "license": "MIT",
     "authors": [
         {
