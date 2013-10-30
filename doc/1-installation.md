@@ -5,7 +5,7 @@
 ```json
 "require": {
     ...
-    "danielcsgomes/mailchimpapi": "1.0.*@dev"
+    "danielcsgomes/mailchimp-api-connector": "2.0.*@dev"
 }
 ```
 Back to [index](index.md)

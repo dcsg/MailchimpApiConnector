@@ -14,7 +14,7 @@
         <!-- <server name="MAILCHIMP_LIST_ID" value="YOUR_LIST_ID" /> -->
     </php>
     <testsuites>
-        <testsuite name="MailchimpApi Test Suite">
+        <testsuite name="Mailchimp Api Connector Test Suite">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>
