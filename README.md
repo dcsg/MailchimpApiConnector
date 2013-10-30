@@ -1,7 +1,7 @@
 Mailchimp Abstract API Connector
 ================================
 
-[![Build Status](https://travis-ci.org/danielcsgomes/MailchimpApiConnector.png?branch=master)](https://travis-ci.org/danielcsgomes/MailchimpApiConnector) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApi/badges/quality-score.png?s=435ce0fae0b07d7c445af8f67125f537c10f20e5)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApi/) [![Code Coverage](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApi/badges/coverage.png?s=9aba2cb57afa875a6f7006f2bfbdb856ab3135a2)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApi/)
+[![Build Status](https://travis-ci.org/danielcsgomes/MailchimpApiConnector.png?branch=master)](https://travis-ci.org/danielcsgomes/MailchimpApiConnector) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/badges/quality-score.png?s=5200860a4897f9d9191b8f01a5a53eed89c382d7)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/) [![Code Coverage](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/badges/coverage.png?s=eb87fc503b2ce35aaaf6f1be7b6c91601fa28cea)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/)
 
 **Mailchimp Abstract API Connector** is a PHP 5.3+ library that allows you to connect in an abstract and simple way to the **Mailchimp API** and **Mailchimp Export API**.
 
@@ -17,7 +17,7 @@ This library is not a wrapper of [**Mailchimp API**](http://apidocs.mailchimp.co
 
 The bulk of the documentation is stored in the doc/index.md file:
 
-[Read the Documentation](https://github.com/danielcsgomes/MailchimpApi/blob/master/doc/index.md)
+[Read the Documentation](https://github.com/danielcsgomes/MailchimpApiConnector/blob/master/doc/index.md)
 
 # TODO
 
