@@ -1,6 +1,6 @@
 # Usage of the Mailchimp Export API v1.0
 
-## Simple example of exporting the list members
+#### Simple example of exporting the list members
 
 ```php
 
