@@ -39,7 +39,7 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
      * @const string URL Format to call the API
      */
     const API_URL = "";
-    
+
     /**
      * @var HttpAdapterInterface
      */
