@@ -15,12 +15,18 @@ use MailchimpApiConnector\HttpAdapter\HttpAdapterInterface;
 
 /**
  * Class AbstractMailchimpApi
+ *
  * @package MailchimpApiConnector
+ *
  * @author Daniel Gomes <me@danielcsgomes.com>
- * @todo Add option to connect the API by using the POST method and HTTPS
  */
 abstract class AbstractMailchimpApi implements MailchimpApiInterface
 {
+    /**
+     * @version
+     */
+    const VERSION = '2.1.0';
+
     /**
      * Possible Formats Constants
      */
@@ -28,14 +34,12 @@ abstract class AbstractMailchimpApi implements MailchimpApiInterface
     const FORMAT_PHP = 'php';
     const FORMAT_XML = 'xml';
     const FORMAT_LOLCODE = 'lolcode';
-    /**
-     * @version
-     */
-    const VERSION = '2.1.0';
+
     /**
      * @const string URL Format to call the API
      */
     const API_URL = "";
+    
     /**
      * @var HttpAdapterInterface
      */
