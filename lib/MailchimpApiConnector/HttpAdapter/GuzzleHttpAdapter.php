@@ -50,7 +50,8 @@ class GuzzleHttpAdapter implements HttpAdapterInterface
     public function postContent($url, $headers = array(), $content = '', array $options = array())
     {
         try {
-            $response = $this->client->post($url, $headers, $content, $options);
+            $request = $this->client->post($url, $headers, $content, $options);
+            $response = $this->client->send($request);
             $content = (string) $response->getBody();
         } catch (\Exception $e) {
             $content = null;

@@ -46,8 +46,8 @@ class GuzzleHttpAdapterTest extends TestCase
         $mockPlugin = new MockPlugin(array(new Response(200, null, 'body')));
 
         $client = new Client();
-        $client->getEventDispatcher()->addSubscriber($mockPlugin);
-        $client->getEventDispatcher()->addSubscriber($historyPlugin);
+        $client->addSubscriber($mockPlugin);
+        $client->addSubscriber($historyPlugin);
 
         $adapter = new GuzzleHttpAdapter($client);
         $this->assertEquals('body', $adapter->getContent('http://test.com/'));
@@ -68,8 +68,8 @@ class GuzzleHttpAdapterTest extends TestCase
         $mockPlugin = new MockPlugin(array(new Response(200, null, 'body')));
 
         $client = new Client();
-        $client->getEventDispatcher()->addSubscriber($mockPlugin);
-        $client->getEventDispatcher()->addSubscriber($historyPlugin);
+        $client->addSubscriber($mockPlugin);
+        $client->addSubscriber($historyPlugin);
 
         $adapter = new GuzzleHttpAdapter($client);
         $this->assertEquals('body', $adapter->postContent('http://test.com/', array(), 'body'));
