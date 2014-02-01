@@ -21,6 +21,7 @@ namespace MailchimpApiConnector;
 class MailchimpApi extends AbstractMailchimpApi implements MailchimpApiInterface
 {
     const API_URL = 'https://%s.api.mailchimp.com/%0.1f/%s';
+
     /**
      * {@inheritdoc}
      */
@@ -55,9 +56,9 @@ class MailchimpApi extends AbstractMailchimpApi implements MailchimpApiInterface
     /**
      * Gets the url for Mailchimp API version < 2.0
      *
-     * @param $method
-     * @param array $params
-     * @param $format
+     * @param string $method
+     * @param array  $params
+     * @param string $format
      *
      * @return string
      */

@@ -12,7 +12,6 @@
 
 namespace MailchimpApiConnector\HttpAdapter;
 
-use MailchimpApiConnector\HttpAdapter\HttpAdapterInterface;
 use Zend\Http\Client;
 use Zend\Http\Request;
 
