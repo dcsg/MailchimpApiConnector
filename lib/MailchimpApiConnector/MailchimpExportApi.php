@@ -13,9 +13,8 @@
 namespace MailchimpApiConnector;
 
 /**
- * Class MailchimpExportApi
+ * Class to use the Mailchimp Export API <http://apidocs.mailchimp.com/export/>
  * @package MailchimpApiConnector
- * @description Class to use the Mailchimp Export API <http://apidocs.mailchimp.com/export/>
  *
  * @author Daniel Gomes <me@danielcsgomes.com>
  */

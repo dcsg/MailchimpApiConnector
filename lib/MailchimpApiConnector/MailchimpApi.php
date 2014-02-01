@@ -13,9 +13,8 @@
 namespace MailchimpApiConnector;
 
 /**
- * Class MailchimpApiConnector
+ * Class to use the Mailchimp API <http://apidocs.mailchimp.com/api/>
  * @package MailchimpApiConnector
- * @description Class to use the Mailchimp API <http://apidocs.mailchimp.com/api/>
  *
  * @author Daniel Gomes <me@danielcsgomes.com>
  */
