@@ -1,8 +1,6 @@
 # Mailchimp API Connector
 
-[![Build Status](https://travis-ci.org/danielcsgomes/MailchimpApiConnector.png?branch=master)](https://travis-ci.org/danielcsgomes/MailchimpApiConnector) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/badges/quality-score.png?s=5200860a4897f9d9191b8f01a5a53eed89c382d7)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/) [![Code Coverage](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/badges/coverage.png?s=eb87fc503b2ce35aaaf6f1be7b6c91601fa28cea)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/)
-
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/417b560d-7653-4a04-9b2e-b16aba110a95/big.png)](https://insight.sensiolabs.com/projects/417b560d-7653-4a04-9b2e-b16aba110a95)
+[![Build Status](https://travis-ci.org/danielcsgomes/MailchimpApiConnector.png?branch=master)](https://travis-ci.org/danielcsgomes/MailchimpApiConnector) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/badges/quality-score.png?s=5200860a4897f9d9191b8f01a5a53eed89c382d7)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/) [![Code Coverage](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/badges/coverage.png?s=eb87fc503b2ce35aaaf6f1be7b6c91601fa28cea)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/417b560d-7653-4a04-9b2e-b16aba110a95/mini.png)](https://insight.sensiolabs.com/projects/417b560d-7653-4a04-9b2e-b16aba110a95)
 
 **Mailchimp API Connector** is a lightweight PHP 5.3+ library that allows you to connect in an abstract and simple way to the **Mailchimp API** and **Mailchimp Export API**.
 
