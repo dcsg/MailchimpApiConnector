@@ -46,7 +46,7 @@ class BuzzHttpAdapterTest extends TestCase
 
     public function testPostNullContent()
     {
-        $buzz = new BuzzHttpAdapter();
+        $buzz = new BuzzHttpAdapter(null, false);
         $this->assertNull($buzz->postContent(null));
     }
 
@@ -61,13 +61,13 @@ class BuzzHttpAdapterTest extends TestCase
         $content = 'foobar content';
         $browser = $this->getBrowserMock($content, 'post');
 
-        $buzz = new BuzzHttpAdapter($browser);
+        $buzz = new BuzzHttpAdapter($browser, false);
         $this->assertEquals($content, $buzz->postContent('http://www.example.com'));
     }
 
     protected function getBrowserMock($content, $method = 'get')
     {
-        $mock = $this->getMock('\Buzz\Browser');
+        $mock = $this->getMock('\Buzz\Browser', array($method, 'setVerifyPeer'));
         $mock
             ->expects($this->once())
             ->method($method)

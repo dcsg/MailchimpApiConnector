@@ -41,13 +41,12 @@ class MailchimpApi extends AbstractMailchimpApi implements MailchimpApiInterface
         $content = array_merge(
             $params,
             array(
-                 'apikey' => $this->getApiKey(),
-                 'method' => "{$method}.{$format}",
+                 'apikey' => $this->getApiKey()
             )
         );
 
         return $this->getAdapter()->postContent(
-            $this->getUrl($method),
+            $this->getUrl("{$method}.{$format}"),
             array(),
             json_encode($content)
         );

@@ -25,11 +25,13 @@ class BuzzHttpAdapter implements HttpAdapterInterface
     protected $browser;
 
     /**
-     * @param Browser $browser Browser object
+     * @param Browser $browser
+     * @param Boolean $verifypeer
      */
-    public function __construct(Browser $browser = null)
+    public function __construct(Browser $browser = null, $verifypeer = true)
     {
         $this->browser = null === $browser ? new Browser() : $browser;
+        $this->browser->getClient()->setVerifyPeer($verifypeer);
     }
 
     /**
