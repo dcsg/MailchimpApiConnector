@@ -18,7 +18,7 @@
         "kriswallsmith/buzz": "@stable",
         "guzzle/guzzle": "@stable",
         "zendframework/zend-http": "~2.1",
-        "phpunit/phpunit": "3.7.*@dev"
+        "phpunit/phpunit": "~3.7"
 
     },
     "suggest": {
@@ -34,8 +34,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.0.x-dev"
+            "dev-master": "2.2-dev"
         }
     }
-
 }
