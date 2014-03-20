@@ -1,6 +1,6 @@
 # Mailchimp API Connector
 
-[![Build Status](https://travis-ci.org/danielcsgomes/MailchimpApiConnector.png?branch=master)](https://travis-ci.org/danielcsgomes/MailchimpApiConnector) [![Latest Stable Version](https://poser.pugx.org/danielcsgomes/mailchimp-api-connector/v/stable.png)](https://packagist.org/packages/danielcsgomes/mailchimp-api-connector) [![Total Downloads](https://poser.pugx.org/danielcsgomes/mailchimp-api-connector/downloads.png)](https://packagist.org/packages/danielcsgomes/mailchimp-api-connector) [![Latest Unstable Version](https://poser.pugx.org/danielcsgomes/mailchimp-api-connector/v/unstable.png)](https://packagist.org/packages/danielcsgomes/mailchimp-api-connector) [![License](https://poser.pugx.org/danielcsgomes/mailchimp-api-connector/license.png)](https://packagist.org/packages/danielcsgomes/mailchimp-api-connector) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/badges/quality-score.png?s=5200860a4897f9d9191b8f01a5a53eed89c382d7)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/) [![Code Coverage](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/badges/coverage.png?s=eb87fc503b2ce35aaaf6f1be7b6c91601fa28cea)](https://scrutinizer-ci.com/g/danielcsgomes/MailchimpApiConnector/) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/417b560d-7653-4a04-9b2e-b16aba110a95/mini.png)](https://insight.sensiolabs.com/projects/417b560d-7653-4a04-9b2e-b16aba110a95)
+[![Build Status](https://travis-ci.org/dcsg/MailchimpApiConnector.png?branch=master)](https://travis-ci.org/dcsg/MailchimpApiConnector) [![Latest Stable Version](https://poser.pugx.org/dcsg/mailchimp-api-connector/v/stable.png)](https://packagist.org/packages/dcsg/mailchimp-api-connector) [![Total Downloads](https://poser.pugx.org/dcsg/mailchimp-api-connector/downloads.png)](https://packagist.org/packages/dcsg/mailchimp-api-connector) [![Latest Unstable Version](https://poser.pugx.org/dcsg/mailchimp-api-connector/v/unstable.png)](https://packagist.org/packages/dcsg/mailchimp-api-connector) [![License](https://poser.pugx.org/dcsg/mailchimp-api-connector/license.png)](https://packagist.org/packages/dcsg/mailchimp-api-connector) [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/dcsg/MailchimpApiConnector/badges/quality-score.png?s=5200860a4897f9d9191b8f01a5a53eed89c382d7)](https://scrutinizer-ci.com/g/dcsg/MailchimpApiConnector/) [![Code Coverage](https://scrutinizer-ci.com/g/dcsg/MailchimpApiConnector/badges/coverage.png?s=eb87fc503b2ce35aaaf6f1be7b6c91601fa28cea)](https://scrutinizer-ci.com/g/dcsg/MailchimpApiConnector/) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/417b560d-7653-4a04-9b2e-b16aba110a95/mini.png)](https://insight.sensiolabs.com/projects/417b560d-7653-4a04-9b2e-b16aba110a95)
 
 **Mailchimp API Connector** is a lightweight PHP 5.3+ library that allows you to connect in an abstract and simple way to the **Mailchimp API** and **Mailchimp Export API**.
 
@@ -16,7 +16,7 @@ This library is not a wrapper of [**Mailchimp API**](http://apidocs.mailchimp.co
 
 The bulk of the documentation is stored in the doc/index.md file:
 
-[Read the Documentation](https://github.com/danielcsgomes/MailchimpApiConnector/blob/master/doc/index.md)
+[Read the Documentation](https://github.com/dcsg/MailchimpApiConnector/blob/master/doc/index.md)
 
 ## TODO
 
@@ -25,7 +25,7 @@ The bulk of the documentation is stored in the doc/index.md file:
 
 ## Credits
 
-* [Daniel Gomes](me@danielcsgomes.com)
+* [Daniel Gomes](me@dcsg.com)
 * Part of HTTP Adapters are from [Geocoder Library](https://github.com/geocoder-php/Geocoder)
 
 ## License
