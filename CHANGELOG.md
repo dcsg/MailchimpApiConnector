@@ -1,3 +1,11 @@
+## v2.2.1
+
+ * Changed packagist url since my username on github changed to `dcsg`
+
+## v2.2.0
+
+ * Added setVerifyPeer to BuzzAdapter
+
 ## v2.1.0
 
  * Changed the base namespace.
