@@ -25,7 +25,7 @@ The bulk of the documentation is stored in the doc/index.md file:
 
 ## Credits
 
-* [Daniel Gomes](me@dcsg.com)
+* [Daniel Gomes](me@danielcsgomes.com)
 * Part of HTTP Adapters are from [Geocoder Library](https://github.com/geocoder-php/Geocoder)
 
 ## License
