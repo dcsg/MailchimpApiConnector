@@ -30,4 +30,4 @@ The bulk of the documentation is stored in the doc/index.md file:
 
 ## License
 
-**Mailchimp API Connector** is released under the MIT License. See the bundled LICENSE file for details.
+**Mailchimp API Connector** is released under the MIT License. See the bundled [LICENSE](https://github.com/dcsg/MailchimpApiConnector/blob/master/LICENSE) file for details.
